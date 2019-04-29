@@ -1,3 +1,9 @@
+CREATE DATABASE financeiro;
+
+
+USE financeiro;
+
+
 CREATE TABLE categoria(
     id INTEGER AUTO_INCREMENT PRIMARY KEY
     , nome VARCHAR(50)
@@ -14,7 +20,6 @@ CREATE TABLE pessoa(
     , nome VARCHAR(255)
     , ativo BOOLEAN
     , endereco_id INTEGER
-    , FOREIGN KEY fk_endereco (endereco_id) REFERENCES endereco(id)
 );
 
 INSERT INTO pessoa (nome, ativo, endereco_id) VALUES ('Breno Brito Meireles', true, 1)
